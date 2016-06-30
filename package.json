@@ -1,0 +1,17 @@
+{
+  "name": "local-web-server-mime",
+  "author": "Lloyd Brookes <75pound@gmail.com>",
+  "version": "0.0.0",
+  "description": "mime",
+  "repository": "https://github.com/local-web-server/mime.git",
+  "license": "MIT",
+  "main": "./lib/mime.js",
+  "keywords": [],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js",
+    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
+  }
+}
