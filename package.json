@@ -1,9 +1,9 @@
 {
-  "name": "local-web-server-mime",
+  "name": "lws-mime",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
   "description": "mime",
-  "repository": "https://github.com/local-web-server/mime.git",
+  "repository": "https://github.com/lwsjs/mime.git",
   "license": "MIT",
   "main": "./lib/mime.js",
   "keywords": [],
