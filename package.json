@@ -5,13 +5,10 @@
   "description": "mime",
   "repository": "https://github.com/lwsjs/mime.git",
   "license": "MIT",
-  "main": "./lib/mime.js",
   "keywords": [],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=7.6"
   },
   "scripts": {
-    "test": "tape test/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
   }
 }
