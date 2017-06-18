@@ -1,7 +1,7 @@
 {
   "name": "lws-mime",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "mime",
   "repository": "https://github.com/lwsjs/mime.git",
   "license": "MIT",
@@ -9,6 +9,5 @@
   "engines": {
     "node": ">=7.6"
   },
-  "scripts": {
-  }
+  "scripts": {}
 }
