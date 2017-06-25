@@ -5,3 +5,9 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # lws-mime
+
+Middleware to override the default response MIME types in lws. See [here](https://github.com/lwsjs/local-web-server/wiki/How-to-customise-response-MIME-types) for usage instructions.
+
+* * *
+
+&copy; 2017 Lloyd Brookes <75pound@gmail.com>.

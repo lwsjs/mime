@@ -2,12 +2,22 @@
   "name": "lws-mime",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.2.0",
-  "description": "mime",
+  "description": "Middleware to manipulate response MIME types in lws",
   "repository": "https://github.com/lwsjs/mime.git",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "lws",
+    "mime"
+  ],
   "engines": {
     "node": ">=7.6"
   },
-  "scripts": {}
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "lws": "^1.0.0-pre2.1",
+    "req-then": "^0.6.2",
+    "test-runner": "^0.4.0"
+  }
 }
