@@ -17,7 +17,7 @@ runner.test('simple', async function () {
       }
     }
   }
-  const server = lws.create({
+  const server = lws.listen({
     port,
     stack: [ Mime, One ],
     mime: {

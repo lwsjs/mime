@@ -2,7 +2,7 @@
 
 module.exports = MiddlewareBase => class Mime extends MiddlewareBase {
   description () {
-    return 'Customise the mime-type assigned to any static resource.'
+    return 'Customise the mime-type returned with any static resource.'
   }
 
   middleware (options) {
