@@ -1,12 +1,12 @@
-'use strict'
+const EventEmitter = require('events')
 
-module.exports = MiddlewareBase => class Mime extends MiddlewareBase {
+class Mime extends EventEmitter {
   description () {
     return 'Customise the mime-type returned with any static resource.'
   }
 
-  middleware (options) {
-    const mimeTypes = options.mime
+  middleware (config) {
+    const mimeTypes = config.mime
     if (mimeTypes) {
       this.emit('verbose', 'middleware.mime.config', { mime: mimeTypes })
       return async function (ctx, next) {
@@ -21,3 +21,5 @@ module.exports = MiddlewareBase => class Mime extends MiddlewareBase {
     }
   }
 }
+
+module.exports = Mime

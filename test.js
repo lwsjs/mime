@@ -1,30 +1,28 @@
-const TestRunner = require('test-runner')
+const Tom = require('test-runner').Tom
 const Mime = require('./')
 const Lws = require('lws')
-const request = require('req-then')
+const fetch = require('node-fetch')
 const a = require('assert')
 
-const runner = new TestRunner()
+const tom = module.exports = new Tom('mime')
 
-runner.test('simple', async function () {
+tom.test('simple', async function () {
   const port = 8000 + this.index
-  const lws = new Lws()
-  const One = Base => class extends Base {
+  class One {
     middleware () {
-      return async function (ctx, next) {
-        await next()
+      return function (ctx) {
         ctx.body = 'one'
       }
     }
   }
-  const server = lws.listen({
+  const lws = Lws.create({
     port,
     stack: [ Mime, One ],
     mime: {
       'text/yeah': [ 'txt' ]
     }
   })
-  const response = await request(`http://localhost:${port}/one.txt`)
-  server.close()
-  a.ok(/yeah/.test(response.res.headers['content-type']))
+  const response = await fetch(`http://localhost:${port}/one.txt`)
+  lws.server.close()
+  a.ok(/yeah/.test(response.headers.get('content-type')))
 })
