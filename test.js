@@ -4,7 +4,7 @@ const Lws = require('lws')
 const fetch = require('node-fetch')
 const a = require('assert')
 
-const tom = module.exports = new Tom('mime')
+const tom = module.exports = new Tom()
 
 tom.test('simple', async function () {
   const port = 8000 + this.index
